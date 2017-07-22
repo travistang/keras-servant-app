@@ -24,6 +24,25 @@ const styles = StyleSheet.create({
 	shadowRadius: 4,
 	flexDirection: "row",	
   },
+	cardBackgroundOption :{
+		height: 150,
+		margin: 5,
+		flexDirection: "row"
+	},
+	cardBackgroundOptionDelete:{
+		flex:0.5,
+		backgroundColor:"lightcoral",
+		justifyContent: "center",
+		paddingLeft:23
+	},
+	cardBackgroundOptionFinetune: {
+		flex:0.5,
+		backgroundColor:"lightblue",
+		justifyContent: "center",
+		paddingLeft:23	
+	},
+	trainDetails: {
+	},
   container: {
     flex: 1,
     backgroundColor: '#fff',
