@@ -9,7 +9,7 @@ export default class App extends React.Component {
     return (
 	<ScrollableTabView
 	style = {{marginTop: 20,}}
-	initialPage = {1}
+	initialPage = {0}
 	renderTabBar = {() => <FacebookTabBar/>}
 
 	>
