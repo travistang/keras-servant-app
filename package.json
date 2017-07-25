@@ -22,9 +22,13 @@
     "expo": "^18.0.3",
     "react": "16.0.0-alpha.12",
     "react-native": "^0.45.1",
+    "native-base": "2.2.0",
+    "react-native-form-builder": "^1.0.7",
+    "react-native-form-generator": "^0.9.9",
     "react-native-scrollable-tab-view": "^0.6.7",
     "react-native-swipe-list-view": "^0.4.1",
     "react-native-swipeout": "^2.1.4",
-    "react-native-ui-lib": "^2.0.60"
+    "react-native-ui-lib": "^2.0.60",
+    "tcomb-form-native": "^0.6.9"
   }
 }

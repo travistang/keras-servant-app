@@ -23,6 +23,7 @@ export default class TaskOverviewCard extends React.Component{
 		let separatorColor = isTrainTask?"lightpink":"palegreen";
 		let taskTypeShorthand = isTrainTask?"T":"P";
 		let epoch = isTrainTask?JSON.parse(this.task.config).epoch:null;
+		let dataset = isTrainTask?this.task.dataset.name:null;
 		return (
 			<SwipeRow
 				leftOpenValue = {65}
@@ -45,7 +46,17 @@ export default class TaskOverviewCard extends React.Component{
 			</View>
 			<View style = {styles.card}>
 				<View style={{flex:1,borderRightWidth: 3,borderRightColor: separatorColor}}>
-					<Text text20 style={{color: separatorColor,paddingLeft:5,alignContent: "center",flex:1}}>{taskTypeShorthand}</Text>	
+					<View style= {{flex:0.5}}>
+						<Text text20 style={{color: separatorColor,paddingLeft:5,alignContent: "center",flex:1}}>{taskTypeShorthand}</Text>
+					</View>
+					{
+						this.task.completed?
+						<View style= {{flex:0.5,justifyContent: "center",alignContent:"flex-end", paddingLeft:10}}>
+							<Icon name={"ios-checkmark-outline"} size={40} color={"gray"}/>
+						</View>
+						:
+						<View style = {{flex:0.5}}/>
+					}
 				</View>
 
 				<View style={cardStyle.midSegment}>
@@ -56,7 +67,7 @@ export default class TaskOverviewCard extends React.Component{
 					{
 						isTrainTask?
 							<View bottom style = {styles.trainDetails}>
-								<Text bottom text80 style={{color:'lightcoral'}}>Train for {epoch} epochs</Text>
+								<Text bottom text80 style={{color:'lightcoral'}}>Train on {dataset} for {epoch} epoch{epoch > 1 ?'s':''}</Text>
 							</View>
 						:
 							<View/>

@@ -2,8 +2,10 @@ import React from 'react';
 import { StyleSheet, Text, View, ScrollView} from 'react-native';
 import {styles} from './Style';
 import ScrollableTabView from 'react-native-scrollable-tab-view';
-import TaskView from './components/TaskView'
-import FacebookTabBar from './components/FacebookTabBar'
+import TaskView from './components/TaskView';
+import FacebookTabBar from './components/FacebookTabBar';
+import TaskDetailView from './components/TaskDetailView';
+
 export default class App extends React.Component {
   render() {
     return (
@@ -17,9 +19,7 @@ export default class App extends React.Component {
 		<TaskView />
 	</ScrollView>
 	<ScrollView tabLabel = "ios-people" style = {styles.tabView}>	
-		<View style = {styles.card}>
-			<Text> Hello! </Text>
-		</View>
+		<TaskDetailView/>
 	</ScrollView>
 	</ScrollableTabView>
     );
